@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Person from './Person/Person';
 
 class App extends Component {
+  state = {
+    persons: [
+      { name: "Jaime", age: 27 }
+    ]
+  }
+
   render() {
     return (
       <div className="App">
-        <h1>Hi, I'm a React App</h1>
+        <Person name={this.state.persons[0].name} age={this.state.persons[0].age}> Hobbies: Videogames </Person>
       </div>
     );
   }
